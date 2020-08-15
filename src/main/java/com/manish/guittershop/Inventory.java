@@ -4,6 +4,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.manish.guittershop.enums.Builder;
+import com.manish.guittershop.enums.Type;
+import com.manish.guittershop.enums.Wood;
+
 public class Inventory {
 	private List<Guitar> guitars;
 	
@@ -11,7 +15,7 @@ public class Inventory {
 		guitars = new LinkedList<>();
 	}
 	
-	public void addGuitar(String serialNumber, String builder, String model, String type, String backWood, String topWood,
+	public void addGuitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood,
 			Double price) {
 		
 		Guitar guitar = new Guitar(serialNumber, builder, model, type, backWood, topWood, price);
@@ -32,28 +36,24 @@ public class Inventory {
 		for(Iterator<Guitar> i = guitars.iterator(); i.hasNext();) {
 			Guitar guitar = i.next();
 			
-			String builder = searchGuitar.getBuilder();
-			if(builder != null && !builder.equals("") && !builder.equals(guitar.getBuilder())) {
+			if(!searchGuitar.getBuilder().equals(guitar.getBuilder())) {
 				continue;
 			}
 			
 			String model = searchGuitar.getModel();
-			if(model != null && !model.equals("") && !model.equals(guitar.getModel())) {
+			if(model != null && !model.equals("") && !model.equalsIgnoreCase(guitar.getModel())) {
 				continue;
 			}
 			
-			String type = searchGuitar.getType();
-			if(type != null && !type.equals("") && !type.equals(guitar.getType())) {
+			if(!searchGuitar.getType().equals(guitar.getType())) {
 				continue;
 			}
 			
-			String backWood = searchGuitar.getBackWood();
-			if(backWood != null && !backWood.equals("") && !backWood.equals(guitar.getBackWood())) {
+			if(!searchGuitar.getBackWood().equals(guitar.getBackWood())) {
 				continue;
 			} 
 			
-			String topWood = searchGuitar.getTopWood();
-			if(topWood != null && !topWood.equals("") && !topWood.equals(guitar.getTopWood())) {
+			if(!searchGuitar.getTopWood().equals(guitar.getTopWood())) {
 				continue;
 			} 
 			

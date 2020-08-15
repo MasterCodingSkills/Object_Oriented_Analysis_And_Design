@@ -1,15 +1,19 @@
 package com.manish.guittershop;
 
+import com.manish.guittershop.enums.Builder;
+import com.manish.guittershop.enums.Type;
+import com.manish.guittershop.enums.Wood;
+
 public class Guitar {
 	private String serialNumber;
-	private String builder;
+	private Builder builder;
 	private String model;
-	private String type;
-	private String backWood;
-	private String topWood;
+	private Type type;
+	private Wood backWood;
+	private Wood topWood;
 	private Double price;
 	
-	public Guitar(String serialNumber, String builder, String model, String type, String backWood, String topWood,
+	public Guitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood,
 			Double price) {
 		super();
 		this.serialNumber = serialNumber;
@@ -20,16 +24,17 @@ public class Guitar {
 		this.topWood = topWood;
 		this.price = price;
 	}
+	
 	public String getSerialNumber() {
 		return serialNumber;
 	}
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
-	public String getBuilder() {
+	public Builder getBuilder() {
 		return builder;
 	}
-	public void setBuilder(String builder) {
+	public void setBuilder(Builder builder) {
 		this.builder = builder;
 	}
 	public String getModel() {
@@ -38,22 +43,22 @@ public class Guitar {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType(Type type) {
 		this.type = type;
 	}
-	public String getBackWood() {
+	public Wood getBackWood() {
 		return backWood;
 	}
-	public void setBackWood(String backWood) {
+	public void setBackWood(Wood backWood) {
 		this.backWood = backWood;
 	}
-	public String getTopWood() {
+	public Wood getTopWood() {
 		return topWood;
 	}
-	public void setTopWood(String topWood) {
+	public void setTopWood(Wood topWood) {
 		this.topWood = topWood;
 	}
 	public Double getPrice() {

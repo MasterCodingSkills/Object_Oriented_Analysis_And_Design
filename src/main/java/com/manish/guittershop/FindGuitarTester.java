@@ -1,5 +1,9 @@
 package com.manish.guittershop;
 
+import com.manish.guittershop.enums.Builder;
+import com.manish.guittershop.enums.Type;
+import com.manish.guittershop.enums.Wood;
+
 public class FindGuitarTester {
 	
 	public static void main(String[] args) {
@@ -11,7 +15,7 @@ public class FindGuitarTester {
 
 	public static String searchGuitter(Inventory inventory) {
 		
-		Guitar whatErinLikes = new Guitar("","fender","Stratocaster","electric","Alder","Alder",0.0);
+		Guitar whatErinLikes = new Guitar("",Builder.FENDER,"Stratocaster",Type.ELECTRIC,Wood.ALDER,Wood.ALDER,0.0);
 		Guitar guitar = inventory.search(whatErinLikes);
 		if(guitar != null) {
 			return "Erin, you might like this "+
@@ -19,7 +23,7 @@ public class FindGuitarTester {
 					guitar.getType() + " guitar:\n   "+
 					guitar.getBackWood() + "back and sides, \n   "+
 					guitar.getTopWood() + " top.\nYou can have it for only $"+
-					guitar.getPrice() + "!Bug";
+					guitar.getPrice() + "!";
 		} else {
 			return "Sorry Erin, we have nothing for you.!";
 		}
@@ -27,9 +31,9 @@ public class FindGuitarTester {
 	}
 	
 	public static void initializeInventory(Inventory inventory) {
-		inventory.addGuitar("","fender","Stratocaster","electric","Alder","Alder",5.0);
-		inventory.addGuitar("","kumvar","kingStone","electric","Older","Alder",8.0);
-		inventory.addGuitar("","Saanu","HandMade","Non-Electric","Younger","Older",10.0);
+		inventory.addGuitar("",Builder.FENDER,"Stratocaster",Type.ELECTRIC,Wood.ALDER,Wood.ALDER,5.0);
+		inventory.addGuitar("",Builder.GIBSON,"Stratocaster",Type.ACOUSTIC,Wood.BRAZILIAN_ROSEWOOD,Wood.ALDER,0.0);
+		inventory.addGuitar("",Builder.COLLINGS,"Stratocaster",Type.ELECTRIC,Wood.INDIAN_ROSEWOOD,Wood.CEDAR,0.0);
 	}
 	
 	

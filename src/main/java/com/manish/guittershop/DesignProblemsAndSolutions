@@ -1,0 +1,12 @@
+
+----------------Problem in Initial Design------------------
+
+1 : Except price every property of Guitar is in String format,
+	if user provide his search inputs in LowerCase,UpperCase or
+	in mix format than searching of Guitar not works.
+		-> Even though we can eliminate this by caseInsensitve 
+		search but that increases burden of comparing Strings.
+		
+Solution Applied :
+	For type safety we should apply Enum instead of String checks.
+	

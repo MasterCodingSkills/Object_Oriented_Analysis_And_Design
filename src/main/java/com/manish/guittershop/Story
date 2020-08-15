@@ -1,0 +1,9 @@
+This is a GuitarShop Application.
+
+----------Initial Application Functionality-------------
+
+Client will provide the specifications of a guitar that he
+wants to buy, GuitarShop application will search in the
+inventory(List of Guitars) according to client requirements
+and will come up with Guitar if user specifications matches
+with inventory guitar list
