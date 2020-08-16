@@ -7,3 +7,9 @@ wants to buy, GuitarShop application will search in the
 inventory(List of Guitars) according to client requirements
 and will come up with Guitar if user specifications matches
 with inventory guitar list
+
+
+----------Client 2nd Requirement----------------------
+
+Now client wants to return more than one guitar if customer
+requirements match with more than one guitar. 
