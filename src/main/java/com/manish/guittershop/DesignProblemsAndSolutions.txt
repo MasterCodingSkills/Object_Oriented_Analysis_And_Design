@@ -17,4 +17,11 @@ Solution Applied :
 Solution Applied : 
 	Encapsulate Guitar Specifications that client is sending in search.
 	
+
+3 : Inventory class is too much interested in GuitarSpecification class
+	any change in GuitarSpecification class can lead to change in 
+	Inventory class also.
 	
+Solution Applied : 
+	Delegating GuitarSpecification matching process to the
+	GuitarSpecification class.

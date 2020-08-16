@@ -8,11 +8,11 @@ public class GuitterSeachTesting {
 	
 	@Test
 	public void testSearchGuitterPositive() {
-		 String expected = "Erin, you might like this Fender Stratocaster electric guitar:\n   " + 
+		 String expected = "Erin, you might like this Fender Stratocaster 6-String electric guitar:\n   " + 
 		 		"Alderback and sides, \n   " + 
 		 		"Alder top.\n" + 
 		 		"You can have it for only $5.0!\n\n"+
-		 		"Erin, you might like this Fender Stratocaster electric guitar:\n   " + 
+		 		"Erin, you might like this Fender Stratocaster 6-String electric guitar:\n   " + 
 		 		"Alderback and sides, \n   " + 
 		 		"Alder top.\n" + 
 		 		"You can have it for only $10.0!\n\n";

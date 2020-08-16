@@ -17,9 +17,9 @@ public class Inventory {
 	}
 	
 	public void addGuitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood,
-			Double price) {
+			Double price,int numberOfStrings) {
 		Guitar guitar = new Guitar(serialNumber ,price, 
-				new GuitarSpecifications(builder, model, type, backWood, topWood));
+				new GuitarSpecifications(builder, model, type, backWood, topWood,numberOfStrings));
 		guitars.add(guitar);
 	}
 	
@@ -40,28 +40,10 @@ public class Inventory {
 			Guitar guitar = i.next();
 			GuitarSpecifications guitarSpecifications = guitar.getGuitarSpecifications();
 			
-			if(!searchGuitar.getBuilder().equals(guitarSpecifications.getBuilder())) {
-				continue;
+			if(guitarSpecifications.matches(searchGuitar)) {
+				matchingGuitars.add(guitar);
 			}
 			
-			String model = searchGuitar.getModel();
-			if(model != null && !model.equals("") && !model.equalsIgnoreCase(guitarSpecifications.getModel())) {
-				continue;
-			}
-			
-			if(!searchGuitar.getType().equals(guitarSpecifications.getType())) {
-				continue;
-			}
-			
-			if(!searchGuitar.getBackWood().equals(guitarSpecifications.getBackWood())) {
-				continue;
-			} 
-			
-			if(!searchGuitar.getTopWood().equals(guitarSpecifications.getTopWood())) {
-				continue;
-			} 
-			
-			matchingGuitars.add(guitar);
 		}
 		return matchingGuitars;
 	}
