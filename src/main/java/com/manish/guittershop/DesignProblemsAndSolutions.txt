@@ -10,3 +10,11 @@
 Solution Applied :
 	For type safety we should apply Enum instead of String checks.
 	
+	
+2 : Sending a Guitar object in search method is unnecessary because
+	client is never sending all properties.
+	
+Solution Applied : 
+	Encapsulate Guitar Specifications that client is sending in search.
+	
+	
