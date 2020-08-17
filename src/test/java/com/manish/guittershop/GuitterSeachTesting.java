@@ -18,9 +18,9 @@ public class GuitterSeachTesting {
 		 		"You can have it for only $10.0!\n\n";
 		 
 		 Inventory inventory = new Inventory();
-		 FindGuitarTester.initializeInventory(inventory);
+		 GuitarShop.initializeInventory(inventory);
 		 
-	     assertEquals(expected,FindGuitarTester.searchGuitter(inventory));
+	     assertEquals(expected,GuitarShop.searchGuitter(inventory));
 	}
 	
 	@Test
@@ -28,6 +28,6 @@ public class GuitterSeachTesting {
 		String expected = "Sorry Erin, we have nothing for you.!";
 		
 		Inventory inventory = new Inventory();
-		assertEquals(expected,FindGuitarTester.searchGuitter(inventory));
+		assertEquals(expected,GuitarShop.searchGuitter(inventory));
 	}
 }

@@ -6,7 +6,7 @@ import com.manish.guittershop.enums.Builder;
 import com.manish.guittershop.enums.Type;
 import com.manish.guittershop.enums.Wood;
 
-public class FindGuitarTester {
+public class GuitarShop {
 	
 	public static void main(String[] args) {
 		Inventory inventory = new Inventory();
